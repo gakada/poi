@@ -14,6 +14,7 @@ const handleProxyGameOnRequest = (method, [domain, path], body, time) => {
   try {
     body = JSON.parse(body)
     const details = {
+      domain: domain,
       method: method,
       path: path,
       body: body,
@@ -75,6 +76,7 @@ const parseResponses = () => {
   }
 
   const details = {
+    domain: domain,
     method: method,
     path: path,
     body: body,
